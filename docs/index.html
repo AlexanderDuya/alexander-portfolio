@@ -3,273 +3,434 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Alexander Duya - Retro Portfolio</title>
+    <meta
+      name="description"
+      content="Alexander Duya is a Software Engineer at Wise and Delivery Lead at The Node Foundation, with experience across software engineering, cloud systems and data science."
+    />
+    <title>Alexander Duya | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <header class="top-section">
-      <h1>Alexander Duya</h1>
-      <p class="subtitle">
-        Software Engineer @ Wise | Computer Science Graduate
-      </p>
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="Alexander Duya, back to top"
+        ><span class="mark">AD</span>Alexander Duya</a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#play">Play</a>
+        <a class="btn btn-green" href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <section id="WARNING" class="panel">
-      <h2>THIS SITE IS UNDER DEVELOPMENT!</h2>
-      <h2>----------13/09/2026-----------</h2>
-    </section>
+    <main id="top">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <h1>I build software that moves money.</h1>
+            <p class="lead">
+              I'm Alexander, a Software Engineer at Wise and Delivery Lead at
+              The Node Foundation. Right now my team is making a £100,000
+              transfer feel as easy as sending £100.
+            </p>
+            <div class="actions">
+              <a class="btn btn-green" href="#projects">See my work</a>
+              <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            </div>
+          </div>
 
-    <section id="about" class="panel">
-      <h2>About Me</h2>
-      <div class="about-container">
-        <img src="profile.png" alt="Alexander Duya" class="profile-pic" />
-
-        <div class="about-text">
-          <p>
-            I'm Alexander Duya, a Software Engineer at Wise. I'm passionate
-            about building scalable, secure software and solving real-world
-            problems through technology. I have experience across software
-            engineering, cloud infrastructure, web development, and machine
-            learning, and I'm always looking to learn, build, and improve.
-          </p>
-
-          <p>
-            I graduated from Kingston University with First Class Honours in
-            Computer Science, achieving a 92% average.
-          </p>
+          <div class="send-card" aria-label="Interactive transfer demo">
+            <p class="send-label">You send</p>
+            <output id="amount" class="send-amount" for="amountRange"
+              >£100,000</output
+            >
+            <input
+              id="amountRange"
+              type="range"
+              min="100"
+              max="100000"
+              step="100"
+              value="100000"
+              aria-label="Amount to send in pounds"
+            />
+            <div class="send-row"><span>£100</span><span>£100,000</span></div>
+            <p class="send-note" id="amountNote">
+              The High Volume team's goal: this should feel as simple as sending
+              £100.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="projects" class="panel">
-      <h2>Projects</h2>
-
-      <div class="projects-grid" id="main-projects">
-        <article class="project-card">
-          <h3>Spotlight</h3>
-          <p>
-            📸 A social sharing app built with React Native (Expo), Clerk for
-            authentication, and Convex for the backend. Users can post, comment,
-            and bookmark content in an Instagram-style experience.
-          </p>
-
-          <a
-            href="https://github.com/AlexanderDuya/Spotlight"
-            class="btn small"
-            data-title="Spotlight"
-            data-description="Spotlight is a modern mobile app built using React Native with Expo, designed to let users share, comment, and bookmark posts. It combines a smooth user experience with real-time updates, secure authentication, and a clean visual style.
-
-This project is where I learned how to apply my React skills in a mobile environment, building everything from UI components to backend integration."
-            data-link="https://github.com/AlexanderDuya/Spotlight"
-            >View Project</a
-          >
-        </article>
-
-        <article class="project-card">
-          <h3>Colour-Picker</h3>
-          <p>
-            A simple and interactive colour picker built with React and Vite.
-            Users can select colours, generate harmonious schemes, save
-            favourites, track history, and export palettes.
-          </p>
-
-          <a
-            href="https://github.com/AlexanderDuya/Colour-Picker-React"
-            class="btn small"
-            data-title="Colour-Picker"
-            data-description="Colour Picker is a React application that allows users to select colours and automatically generate complementary, analogous, triadic, and tetradic colour schemes.
-
-Users can save favourite colours, track their colour history, and export palettes as JSON or CSS for use in other projects."
-            data-link="https://github.com/AlexanderDuya/Colour-Picker-React"
-            >View Project</a
-          >
-        </article>
-      </div>
-
-      <div class="projects-grid hidden" id="extra-projects">
-        <article class="project-card">
-          <h3>Project Three</h3>
-          <p>Description of Project Three.</p>
-
-          <a
-            href="#"
-            class="btn small"
-            data-title="Project Three"
-            data-description="More details about Project Three."
-            >View Project</a
-          >
-        </article>
-
-        <article class="project-card">
-          <h3>Project Four</h3>
-          <p>Description of Project Four.</p>
-
-          <a
-            href="#"
-            class="btn small"
-            data-title="Project Four"
-            data-description="More details about Project Four."
-            >View Project</a
-          >
-        </article>
-      </div>
-
-      <div class="btn-container">
-        <button id="view-more-btn" class="btn">View More Projects</button>
-      </div>
-    </section>
-
-    <section id="experience" class="panel">
-      <h2>Levels Completed</h2>
-
-      <ul class="timeline">
-        <li>
-          <strong>Wise</strong> — Software Engineer
-          <span class="date">(Sep 2026 - Present)</span>
-
-          <p class="experience-desc">💳 Software Engineering | London</p>
-        </li>
-
-        <li>
-          <strong>Sky</strong> — Data Scientist Intern
-          <span class="date">(Mar 2026 - Aug 2026)</span>
-
-          <p class="experience-desc">
-            📊 Python & Machine Learning | Hybrid, London
-          </p>
-        </li>
-
-        <li>
-          <strong>BAE Systems</strong> — Software Engineer Intern
-          <span class="date">(Jun 2025 - Sep 2025)</span>
-
-          <p class="experience-desc">
-            🔒 Contributed to a secure government digital project in an Agile
-            team. Delivered 15+ production tickets and 2,000+ lines of
-            TypeScript. Reduced production log noise by 70% and open security
-            issues by 92%. Worked with AWS Lambda, SQS, DynamoDB and CloudWatch.
-            Pathfinder Award recipient.
-          </p>
-        </li>
-
-        <li>
-          <strong>CSE Connect</strong> — React Engineer Intern
-          <span class="date">(Jan 2025 - Apr 2025)</span>
-
-          <p class="experience-desc">
-            ⚛️ Developed a client-facing booking platform using React. Built
-            reusable components, dynamic form validation and worked with
-            stakeholders through Agile 2-week sprints.
-          </p>
-        </li>
-
-        <li>
-          <strong>Adclear.ai</strong> — Software Engineer Intern
-          <span class="date">(Aug 2024 - Dec 2024)</span>
-
-          <p class="experience-desc">
-            🤖 Built automation tools using Node.js and Puppeteer and developed
-            tooling to support AI-powered advertising workflows. Integrated APIs
-            to streamline internal processes.
-          </p>
-        </li>
-
-        <li>
-          <strong>Kingston University</strong> — Academic Mentor & Computer
-          Science Graduate
-          <span class="date">(2023 - 2026)</span>
-
-          <p class="experience-desc">🎓 First Class Honours | 92% average</p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="skills" class="panel">
-      <h2>Power-Ups</h2>
-
-      <ul class="skills-list">
-        <li>TypeScript</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>Java</li>
-        <li>React</li>
-        <li>React Native</li>
-        <li>Node.js</li>
-        <li>AWS</li>
-        <li>SQL</li>
-        <li>Git</li>
-        <li>Jest</li>
-        <li>Cucumber</li>
-      </ul>
-    </section>
-
-    <section id="snake-game" class="panel">
-      <h2>8-Bit Snake!</h2>
-
-      <canvas id="gameBoard" width="500" height="500"></canvas>
-
-      <div class="score-container">
-        <div>
-          <h3>Current Score</h3>
-          <div id="scoreText">0</div>
+      <section class="stats" aria-label="Highlights">
+        <div class="wrap stats-grid">
+          <div>
+            <strong>First Class</strong
+            ><span>BSc Computer Science, Kingston University</span>
+          </div>
+          <div><strong>92%</strong><span>degree average</span></div>
+          <div class="past">
+            <span>Previously at</span>
+            <ul class="logos">
+              <li class="logo-sky" aria-label="Sky">sky</li>
+              <li class="logo-bae" aria-label="BAE Systems">BAE SYSTEMS</li>
+              <li class="logo-adclear" aria-label="Adclear.ai">
+                adclear<i>.ai</i>
+              </li>
+            </ul>
+          </div>
         </div>
+      </section>
 
-        <div>
-          <h3>Highest Score</h3>
-          <div id="highScoreText">0</div>
+      <section id="about" class="section">
+        <div class="wrap">
+          <h2>About me</h2>
+          <div class="about">
+            <img
+              src="profile.png"
+              alt="Portrait of Alexander Duya"
+              class="profile-pic"
+            />
+            <div class="prose">
+              <p>
+                I'm a Computer Science graduate from Kingston University with
+                First Class Honours and a 92% average. During my degree I also
+                worked as an Academic Mentor, supporting other students with
+                programming and their studies.
+              </p>
+              <p>
+                At Wise I work in the Global Product Tribe's Send squad, as part
+                of the High Volume team. We're building a smooth, reliable
+                experience for customers moving larger amounts of money.
+              </p>
+              <p>
+                Alongside engineering, I'm a Delivery Lead at The Node
+                Foundation. I help lead delivery of the Node Fellowship, develop
+                its curriculum and coordinate mentors so Fellows get a
+                structured, supportive experience as they learn and build.
+              </p>
+              <p>
+                Before that, I worked at BAE Systems, CSE Connect and Adclear,
+                and did a Data Science internship at Sky using call-routing data
+                and machine learning to improve support routing.
+              </p>
+              <p class="links">
+                <a
+                  href="https://www.linkedin.com/in/alexanderduya/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+                <a
+                  href="https://github.com/AlexanderDuya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div>
-          <h3>Total Plays</h3>
-          <div id="howManyPlayed">0</div>
+      <section id="experience" class="section tint">
+        <div class="wrap">
+          <h2>Experience and achievements</h2>
+          <ol class="timeline">
+            <li>
+              <h3>Software Engineer, Wise</h3>
+              <p class="date">Sep 2026 to present</p>
+              <p>
+                Working in the Global Product Tribe, within the Send squad's
+                High Volume team. Product engineering for high value transfers,
+                making the process as simple and reliable as possible.
+              </p>
+            </li>
+            <li>
+              <h3>Delivery Lead, The Node Foundation</h3>
+              <p class="date">Aug 2026 to present</p>
+              <p>
+                Lead delivery of the Node Fellowship, help develop the
+                curriculum and coordinate mentors. I also make sure sessions are
+                organised and Fellows have the support they need throughout the
+                programme.
+              </p>
+            </li>
+            <li>
+              <h3>Data Scientist Intern, Sky</h3>
+              <p class="date">Jun 2026 to Aug 2026</p>
+              <p>
+                Analysed large customer call routing datasets to understand how
+                calls were being routed. Built and tested machine learning
+                models to route SoIP customer calls to the right support estate,
+                using Python and SQL with data preprocessing and feature
+                engineering.
+              </p>
+            </li>
+            <li>
+              <h3>
+                Software Engineer Intern, BAE Systems Digital Intelligence
+              </h3>
+              <p class="date">Jun 2025 to Sep 2025</p>
+              <p>
+                Worked on a secure government digital project in an Agile team.
+                Delivered around 15 tickets and 2,000+ lines of production code,
+                reduced production log noise by 70% and helped reduce open
+                security issues by 92%. Used TypeScript, AWS Lambda, SQS,
+                DynamoDB, CloudWatch, Jest and Cucumber. Received the Pathfinder
+                Award.
+              </p>
+            </li>
+            <li>
+              <h3>React Engineer Intern, CSE Connect</h3>
+              <p class="date">Jan 2025 to Apr 2025</p>
+              <p>
+                Built parts of a client facing booking platform in React,
+                including reusable components and dynamic form validation.
+                Worked with stakeholders and iterated on their feedback in an
+                Agile team.
+              </p>
+            </li>
+            <li>
+              <h3>Software Engineer Intern, Adclear.ai</h3>
+              <p class="date">Aug 2024 to Dec 2024</p>
+              <p>
+                Built Node.js and Puppeteer automation tools and worked with
+                APIs to support advertising compliance workflows.
+              </p>
+            </li>
+            <li>
+              <h3>
+                BSc Computer Science and Academic Mentor, Kingston University
+              </h3>
+              <p class="date">2023 to 2026</p>
+              <p>
+                Graduated with First Class Honours and a 92% average. Alongside
+                my degree, I supported other Computer Science students with
+                programming and tailored academic support.
+              </p>
+            </li>
+          </ol>
         </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="wrap">
+          <h2>Projects</h2>
+          <div class="projects">
+            <article class="card c-green">
+              <h3>Spotlight</h3>
+              <p>
+                A social sharing mobile app built with React Native and Expo,
+                using Clerk for authentication and Convex for the backend. Users
+                can post, comment and bookmark content.
+              </p>
+              <ul class="tags">
+                <li>React Native</li>
+                <li>Expo</li>
+                <li>Clerk</li>
+                <li>Convex</li>
+              </ul>
+              <a
+                class="btn btn-dark"
+                href="https://github.com/AlexanderDuya/Spotlight"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Spotlight on GitHub</a
+              >
+            </article>
+            <article class="card c-blue">
+              <h3>Colour Picker</h3>
+              <p>
+                A React and Vite tool for exploring colour combinations, saving
+                favourites, viewing colour history and exporting palettes as
+                JSON or CSS.
+              </p>
+              <ul class="tags">
+                <li>React</li>
+                <li>Vite</li>
+              </ul>
+              <a
+                class="btn btn-dark"
+                href="https://github.com/AlexanderDuya/Colour-Picker-React"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Colour Picker on GitHub</a
+              >
+            </article>
+            <article class="card c-orange">
+              <h3>Improving Application Season</h3>
+              <p>
+                A mobile application tracker built with React Native and Expo
+                that helps students keep internship and graduate job
+                applications in one place.
+              </p>
+              <ul class="tags">
+                <li>React Native</li>
+                <li>Expo</li>
+              </ul>
+              <a
+                class="btn btn-dark"
+                href="https://github.com/AlexanderDuya/StudentApplicationApp"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View on GitHub</a
+              >
+            </article>
+            <article class="card c-pink">
+              <h3>AudioStack Demo</h3>
+              <p>
+                A Python demo that uses the Audiostack and Adclear APIs to
+                generate a marketing advert from a product description, then
+                checks it against advertising regulations and suggests changes.
+              </p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>REST APIs</li>
+              </ul>
+              <a
+                class="btn btn-dark"
+                href="https://github.com/AlexanderDuya/AudioStack_Demo"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View on GitHub</a
+              >
+            </article>
+            <article class="card c-yellow">
+              <h3>WebSnapShot</h3>
+              <p>
+                A Node.js and Puppeteer tool that captures full-page website
+                screenshots. It scrolls the page first to trigger animations,
+                then saves each image with a unique timestamped filename.
+              </p>
+              <ul class="tags">
+                <li>Node.js</li>
+                <li>Puppeteer</li>
+              </ul>
+              <div class="card-links">
+                <a
+                  class="btn btn-dark"
+                  href="https://github.com/AlexanderDuya/WebSnapShot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View on GitHub</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section tint">
+        <div class="wrap">
+          <h2>Skills</h2>
+          <ul class="pills">
+            <li>TypeScript</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>React</li>
+            <li>React Native</li>
+            <li>Node.js</li>
+            <li>AWS</li>
+            <li>SQL</li>
+            <li>Git</li>
+            <li>Jest</li>
+            <li>Cucumber</li>
+            <li>Machine Learning</li>
+            <li>Agile Development</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="play" class="section dark">
+        <div class="wrap game">
+          <h2>Take a break: snake</h2>
+          <p class="hint">
+            Arrow keys or WASD to steer. On a phone, swipe on the board.
+          </p>
+          <canvas
+            id="gameBoard"
+            width="500"
+            height="500"
+            aria-label="Snake game board"
+          ></canvas>
+          <div class="scores">
+            <div><span>Score</span><strong id="scoreText">0</strong></div>
+            <div><span>Best</span><strong id="highScoreText">0</strong></div>
+            <div><span>Plays</span><strong id="howManyPlayed">0</strong></div>
+          </div>
+          <button id="resetBtn" class="btn btn-green" type="button">
+            Start game
+          </button>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="wrap contact">
+          <div>
+            <h2>Get in touch</h2>
+            <p class="lead dark-text">
+              If you'd like to talk about software engineering, projects or
+              opportunities, send me a message.
+            </p>
+            <p class="links stack">
+              <a href="mailto:alexduyaconnect@gmail.com"
+                >alexduyaconnect@gmail.com</a
+              >
+              <a
+                href="https://www.linkedin.com/in/alexanderduya/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >linkedin.com/in/alexanderduya</a
+              >
+              <a
+                href="https://github.com/AlexanderDuya"
+                target="_blank"
+                rel="noopener noreferrer"
+                >github.com/AlexanderDuya</a
+              >
+            </p>
+          </div>
+          <form action="https://formspree.io/f/mldnelkz" method="POST">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+            />
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit" class="btn btn-green">Send message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        Built by Alexander Duya. Styled with Wise's public brand colours; not an
+        official Wise site.
       </div>
-
-      <button id="resetBtn">Play / Reset</button>
-    </section>
-
-    <section id="contact" class="panel">
-      <h2 id="contacth2">Contact Me!</h2>
-
-      <form action="https://formspree.io/f/mldnelkz" method="POST">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required />
-
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit" class="btn">Send</button>
-      </form>
-
-      <p class="contact-info">
-        📧 Email:
-        <a href="mailto:alexduyaconnect@gmail.com">
-          alexduyaconnect@gmail.com
-        </a>
-        <br />
-
-        🔗 LinkedIn:
-        <a href="https://www.linkedin.com/in/alexanderduya/">
-          linkedin.com/in/alexanderduya
-        </a>
-        <br />
-
-        💻 GitHub:
-        <a href="https://github.com/alexanderduya">
-          github.com/alexanderduya
-        </a>
-      </p>
-    </section>
-
-    <footer>💻 Developed by Alexander Duya — Press Start 2P retro style</footer>
+    </footer>
 
     <script src="script.js"></script>
   </body>
